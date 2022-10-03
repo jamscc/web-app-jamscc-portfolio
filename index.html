@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css"> <!-- linked the css file -->
     <title>Jamscc Coding Portfolio</title> <!-- added a title -->
 </head>
 
@@ -18,29 +19,29 @@
     </header>
 
     <!-- added links within nav for users to click on -->
-    <nav>
+    <nav id="top-nav">
         <a href="#about">About Me</a>
         <!-- a link to the section highlighting the coding portfolio -->
         <a href="#portfolio">Coding Portfolio</a>
         <a href="#contact">Contact Info</a>
     </nav>
 
-    <main>
+    <main id="main-grid">
         <!-- added three sections below (about, portfolio, and contact) -->
         
-        <section id="about">
-            <h2>About Me</h2>
+        <section class="flexcontainer" id="about">
+            <h2 class="sectionheading">About Me</h2>
             <p> Welcome to my coding portfolio! My name is James. Most of my professional experience has been focused on real estate, and in this field, I have enjoyed using various apps and tools. Over the years, I have become increasingly interested in coding, and so, I decided to enroll in a coding bootcamp. Please visit the Coding Portfolio section on this page, which includes some samples of my portfolio that I put together to date while in the program. The links to the deployed application and repository for each sample are provided in that same section. Thank you for visiting my page. Hope to hear from you soon!</p>
         </section>
         
-        <section id="portfolio">
-            <h2>Coding Portfolio</h2>
+        <section class="flexcontainer" id="portfolio">
+            <h2 class="sectionheading">Coding Portfolio</h2>
             <!-- div for CSS purposes -->
-            <div>
+            <div id="proj-flexcontainer">
                 <!-- the first figure below includes the first application -->
                 <!-- image can be clicked on; takes user to the deployed application -->
                 <!-- also included a link to the repository -->
-                <figure>
+                <figure id="proj1">
                     <h3>Refactored Code Horiseon</h3>
                     <a href="https://jamscc.github.io/refactored-code-horiseon/" target="_blank"><img src="./assets/images/proj1.png" alt="webpage-refactored code"></a>
                     <figcaption>
@@ -51,7 +52,7 @@
                 <!-- the two figures below include placeholder projects -->
                 <!-- images can be clicked on; takes user to the deployed applications -->
                 <!-- also included the links to each repository -->
-                <figure>
+                <figure class="otherproj" id="proj2">
                     <h3>Prework Study Guide</h3>
                     <a href="https://jamscc.github.io/prework-study-guide/" target="_blank"><img src="./assets/images/proj2.png" alt="prework webpage"></a>    
                     <figcaption>
@@ -59,7 +60,7 @@
                     </figcaption>
                 </figure>
                 
-                <figure>
+                <figure class="otherproj" id="proj3">
                     <h3>Landing Page - Draft</h3>
                     <a href="https://jamscc.github.io/mini-project-landing-page/" target="_blank"><img src="./assets/images/proj3.png" alt="draft landing page"></a>
                     <figcaption>
@@ -69,8 +70,8 @@
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Info</h2>
+        <section class="flexcontainer" id="contact">
+            <h2 class="sectionheading">Contact Info</h2>
             <!-- added ways to contact below -->
             <nav>
             <!-- added href="mailto:#"; blank email placeholder for now -->

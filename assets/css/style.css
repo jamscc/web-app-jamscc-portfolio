@@ -1,0 +1,206 @@
+/* CSS variables */
+:root {
+    --page-color-BL: #2e4a62;
+    --page-color-PH: #e0d1cb;
+    --page-color-GY: #b6c3cf;
+    --page-color-GN: #7FB1A4;
+    --text-color-W: #ffffff;
+    --text-color-B: #000000;
+    --fontfamily-H: Helvetica, Arial, sans-serif;
+    --fontfamily-C: 'Courier New', Courier, monospace;
+}
+
+* {
+    font-family: var(--fontfamily-H);
+    color: var(--text-color-B);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* used flex for the header, which includes h1 and the avatar */
+header {
+    background-color: var(--page-color-BL);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: var(--fontfamily-C);
+    color: var(--text-color-W);
+    padding-left: .5em;
+    text-align: center;
+}
+
+header img {
+    height: 100px;
+    width: 100px;
+    margin-right: 8px;
+}
+
+/* used flex for nav below the header */
+#top-nav {
+    background-color: var(--page-color-PH);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#top-nav a {
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 15px 15px;
+}
+
+/* applies when hovering over #top-nav a */
+#top-nav a:hover {
+    border: 2px solid var(--page-color-GN);
+}
+
+/* used grid for main */
+#main-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* used flex for each of the three sections (about, portfolio, and contact) */
+.flexcontainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* applies to the h2 in each section */
+.sectionheading {
+    font-size: 1.25em;
+    background-color: var(--page-color-GY);
+    padding: 16px;
+    text-align: center;
+    flex: 1 1 125px;
+}
+
+/* applies to the element that has the info / content for each section */
+#about p, #proj-flexcontainer, #contact nav {
+    padding: 16px;
+    flex: 1 1 900px;
+}
+
+/* applies to <p> that includes the info for the about section */
+#about p {
+    font-family: var(--fontfamily-C);
+}
+
+/* used flex for the container that has the 3 samples */
+#proj-flexcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+/* applies to the first sample */
+#proj1 {
+    width: 100%;
+    border: 2px solid var(--page-color-BL);
+}
+
+#proj1 a img {
+    width: 100%;
+    object-fit: contain;
+    opacity: .2;
+}
+
+/* applies to the second and third samples */
+.otherproj {
+    flex: 1 1 200px;
+    border: 2px solid var(--page-color-BL);
+    margin-bottom: 16px;
+}
+
+.otherproj a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    opacity: .2;
+}
+
+/* opacity changes to 1 when hovering over an image in the portfolio section */
+#portfolio img:hover {
+    opacity: 1;
+}
+
+#proj1, #proj2, #proj3 {
+    position: relative;
+}
+
+/* h3 in front of the image for each sample */
+#portfolio h3 {
+    font-family: var(--fontfamily-C);
+    background-color: var(--page-color-GY);
+    height: 30px;
+    width: 75%;
+    padding-left: 8px;
+    position: absolute;
+    z-index: 1;
+}
+
+/* added content on how to access the deployed applications for the samples */
+#proj1::after, #proj2::after, #proj3::after {
+    content: "Click on the image";
+    font-family: var(--fontfamily-C);
+    font-size: 16px;
+    font-weight: bold;
+    font-style: oblique;
+    width: 200px;
+    position: absolute;
+    top: 65px;
+    transform: rotate(-10deg);
+    text-align: center;
+}
+
+/* applies to the links to the repo */
+#portfolio figcaption a {
+    background-color: var(--page-color-GN);
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: oblique;
+    width: 120px;
+    height: 30px;
+    padding-top: 2px;
+    box-shadow: 5px 5px gray;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+/* applies when hovering over #portfolio figcaption a */
+#portfolio figcaption a:hover {
+    transform: rotate(10deg);
+}
+
+/* applies to the nav in the contact section */
+#contact nav {
+    background-color: var(--page-color-PH);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+#contact nav a {
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bolder;
+    width: 45%;
+    height: 75px;
+    margin: 3px;
+    padding-top: 24px;
+    box-shadow: 5px 5px gray;
+}
+
+#contact nav a:hover {
+    border: 1px solid var(--page-color-BL);
+}
