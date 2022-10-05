@@ -204,3 +204,78 @@ header img {
 #contact nav a:hover {
     border: 1px solid var(--page-color-BL);
 }
+
+@media screen and (max-width: 768px) {
+
+    /* to center the header and nav */
+
+    #top-nav,
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    header h1 {
+        padding-left: 0;
+    }
+
+    header img {
+        margin-right: 0;
+    }
+
+    /* increased the height for the h3 in each sample */
+
+    #portfolio h3 {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    /* reduced the font size for the h3 in each sample */
+
+    #portfolio h3 {
+        font-size: 1em;
+    }
+
+    #proj1 {
+        margin-bottom: 16px;
+    }
+
+    #proj1 a img {
+        height: 200px;
+    }  
+
+    .otherproj a img {
+        height: 150px;
+    }
+
+    /* increased the width to each nav a in the contact section; */
+
+    #contact nav a {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 250px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    /* increased the width for the h3 in each sample */
+
+    #portfolio h3 {
+        width: 100%;
+    }
+
+    #proj1::after,
+    #proj2::after,
+    #proj3::after {
+        content: "";
+    }
+
+    #contact nav a {
+        font-size: 14px;
+    }
+}
